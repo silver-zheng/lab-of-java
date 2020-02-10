@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+
+<GridPane prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PatientController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="90.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
+         <children>
+            <JFXButton fx:id="ensure" buttonType="RAISED" onAction="#onRegister" prefHeight="45.0" prefWidth="80.0" style="-fx-background-color: #2196f3;" text="确定" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="clear" buttonType="RAISED" onAction="#onClear" prefHeight="45.0" prefWidth="80.0" style="-fx-background-color: #2196f3;" text="清除" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="exit" buttonType="RAISED" onAction="#onExit" prefHeight="45.0" prefWidth="80.0" style="-fx-background-color: #e86767;" text="退出" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <JFXComboBox fx:id="depname" editable="true" labelFloat="true" prefHeight="30.0" prefWidth="250.0" promptText="科室名称" style="-fx-font-size: 17;" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="25.0" />
+         </GridPane.margin>
+      </JFXComboBox>
+      <JFXComboBox fx:id="docname" editable="true" labelFloat="true" prefHeight="30.0" prefWidth="250.0" promptText="医生姓名" style="-fx-font-size: 17;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="25.0" />
+         </GridPane.margin>
+      </JFXComboBox>
+      <JFXComboBox fx:id="registertype" editable="true" labelFloat="true" layoutX="60.0" layoutY="34.0" prefHeight="30.0" prefWidth="250.0" promptText="号种类别" style="-fx-font-size: 17;" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="25.0" />
+         </GridPane.margin>
+      </JFXComboBox>
+      <JFXComboBox fx:id="registername" editable="true" labelFloat="true" layoutX="378.0" layoutY="34.0" prefHeight="30.0" prefWidth="250.0" promptText="号种名称" style="-fx-font-size: 17;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="25.0" />
+         </GridPane.margin>
+      </JFXComboBox>
+      <Line endX="500.0" opacity="0.3" startX="-100.0" strokeWidth="2.0" GridPane.columnSpan="2147483647">
+         <GridPane.margin>
+            <Insets bottom="-30.0" />
+         </GridPane.margin>
+      </Line>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2147483647">
+         <children>
+            <Text fill="#3343ae" strokeType="OUTSIDE" strokeWidth="0.0" text="门诊挂号" textAlignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="20.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="278.0" prefHeight="100.0" prefWidth="200.0" />
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" GridPane.rowIndex="3">
+         <children>
+            <Text fill="#393939" strokeType="OUTSIDE" strokeWidth="0.0" text="应缴金额" textAlignment="CENTER" wrappingWidth="70.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="shouldpay" editable="false" labelFloat="true" prefHeight="35.0" prefWidth="180.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <JFXTextField fx:id="realpay" labelFloat="true" prefHeight="30.0" prefWidth="250.0" promptText="交款金额">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <GridPane alignment="TOP_RIGHT" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="162.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="92.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="87.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="88.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="82.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="89.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="#393939" strokeType="OUTSIDE" strokeWidth="0.0" text="当前余额" textAlignment="CENTER" wrappingWidth="70.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="85.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fill="#393939" strokeType="OUTSIDE" strokeWidth="0.0" text="找零金额" textAlignment="CENTER" wrappingWidth="78.0" GridPane.columnIndex="2">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fill="#393939" strokeType="OUTSIDE" strokeWidth="0.0" text="挂号号码" textAlignment="CENTER" wrappingWidth="70.0" GridPane.columnIndex="4">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Label fx:id="changemoney" prefHeight="23.0" prefWidth="100.0" GridPane.columnIndex="3">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="restmoney" layoutX="351.0" layoutY="24.0" prefHeight="23.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="registernumber" layoutX="179.0" layoutY="24.0" prefHeight="23.0" prefWidth="100.0" textFill="BLUE" GridPane.columnIndex="5">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="361.0" minWidth="10.0" prefWidth="299.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="301.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+</GridPane>

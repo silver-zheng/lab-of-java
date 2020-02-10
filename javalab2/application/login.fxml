@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER_LEFT" prefHeight="271.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="201.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="199.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="149.0" minHeight="0.0" prefHeight="37.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="227.0" minHeight="0.0" prefHeight="24.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="247.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="247.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="247.0" minHeight="0.0" prefHeight="63.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="247.0" minHeight="0.0" prefHeight="57.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="247.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ImageView fitHeight="109.0" fitWidth="118.0" opacity="0.42" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+         <image>
+            <Image url="@./heart.png" />
+         </image>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </ImageView>
+      <Text fill="#0c64a8" strokeType="OUTSIDE" strokeWidth="0.0" text="医院挂号管理系统" textAlignment="CENTER" wrappingWidth="400.0" GridPane.columnSpan="2147483647">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Separator prefWidth="400.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" />
+      <JFXPasswordField fx:id="password" labelFloat="true" promptText="密码" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXPasswordField>
+      <HBox alignment="CENTER" prefHeight="17.0" prefWidth="400.0" spacing="50.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+         <children>
+            <RadioButton fx:id="docRadioBt" mnemonicParsing="false" onAction="#onDoc" selected="true" text="医生" textAlignment="CENTER">
+               <toggleGroup>
+                  <ToggleGroup fx:id="doc" />
+               </toggleGroup>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="patientRatioBt" mnemonicParsing="false" onAction="#onPat" text="患者" toggleGroup="$doc">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </RadioButton>
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </HBox>
+      <JFXButton fx:id="login_bt" buttonType="RAISED" onAction="#onLog" prefHeight="40.0" prefWidth="70.0" ripplerFill="#f8f6f6" style="-fx-background-color: #2196f3;" text="登陆" textFill="#eeebeb" GridPane.rowIndex="6">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="70.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </JFXButton>
+      <JFXButton fx:id="exit_bt" buttonType="RAISED" cancelButton="true" onAction="#onExit" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: #e86767;" text="退出" textFill="#f5f3f3" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="60.0" />
+         </GridPane.margin>
+      </JFXButton>
+      <Line endX="300.0" startX="-100.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
+      <JFXComboBox fx:id="username" editable="true" labelFloat="true" prefHeight="40.0" prefWidth="402.0" promptText="账号" style="-fx-font-size: 17;" visibleRowCount="3" GridPane.columnSpan="2147483647" GridPane.rowIndex="4" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</GridPane>
